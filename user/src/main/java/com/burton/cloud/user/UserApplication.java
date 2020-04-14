@@ -3,11 +3,11 @@ package com.burton.cloud.user;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
-
-import javax.persistence.Entity;
+import org.springframework.cloud.netflix.feign.EnableFeignClients;
 
 @SpringBootApplication
 @EntityScan(basePackages = "com.burton.cloud.common.domain.user")
+@EnableFeignClients
 public class UserApplication {
 
     public static void main(String[] args) {

@@ -6,19 +6,34 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="common" />
-        <module name="eureka" />
-        <module name="movie" />
         <module name="user" />
+        <module name="common" />
+        <module name="movie" />
+        <module name="eureka" />
+        <module name="eureka-1" />
+        <module name="eureka-2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="common" target="1.8" />
       <module name="eureka" target="1.8" />
+      <module name="eureka-1" target="1.8" />
+      <module name="eureka-2" target="1.8" />
+      <module name="eureka-re" target="1.8" />
       <module name="eurekaserver" target="1.8" />
       <module name="movie" target="1.8" />
       <module name="parent" target="1.8" />
       <module name="user" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="common" options="-parameters" />
+      <module name="eureka" options="-parameters" />
+      <module name="eureka-1" options="-parameters" />
+      <module name="eureka-2" options="-parameters" />
+      <module name="movie" options="-parameters" />
+      <module name="user" options="-parameters" />
+    </option>
   </component>
 </project>

@@ -16,6 +16,6 @@ public class BaseServiceImpl<T> implements BaseService<T>{
 
     @Override
     public T findById(Integer id) {
-        return (T) baseRepository.findOne(id);
+        return ((T) baseRepository.findById(id).orElse(null));
     }
 }

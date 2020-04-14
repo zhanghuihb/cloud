@@ -1,11 +1,9 @@
-
 #server
 server:
-  port: 8000
-  servlet:
-    context-path: /user
+  port: 8001
+  context-path: /user
   tomcat:
-    uri-encoding: utf-8
+    uri-encoding: UTF-8
 
 #spring
 spring:
@@ -43,18 +41,12 @@ spring:
       hibernate:
         format_sql: true
         dialect: org.hibernate.dialect.MySQL5Dialect
-   #若不想服务注册到server上,设置为false即可
-  cloud:
-    service-registry:
-      auto-registration:
-        enabled: true
-management:
-  security:
-    enabled: false
 #EUREKA
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://burton:burton@localhost:8761/eureka/,http://burton1:burton1@localhost1:8762/eureka/,http://burton2:burton2@localhost2:8763/eureka/
+    healthcheck:
+      enabled: true
   instance:
     prefer-ip-address: true
