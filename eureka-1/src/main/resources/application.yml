@@ -2,17 +2,18 @@ server:
   port: 8762
 
 #security
-security:
-  basic:
-    enabled: true   #开启给予http basic认证
-  user:
-    name: burton1     #配置登录账号
-    password: burton1 #配置登录密码
+spring:
+  security:
+    basic:
+      enabled: true   #开启给予http basic认证
+    user:
+      name: burton1     #配置登录账号
+      password: burton1 #配置登录密码
 
 eureka:
   client:
-    register-with-eureka: true
-    fetch-registry: true
+    register-with-eureka: false
+    fetch-registry: false
     service-url:
       defaultZone:  http://burton:burton@localhost:8761/eureka/,http://burton2:burton2@localhost2:8763/eureka/
   instance:
