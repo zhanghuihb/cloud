@@ -1,9 +1,10 @@
 #server
 server:
   port: 8001
-  context-path: /user
   tomcat:
     uri-encoding: UTF-8
+  servlet:
+    context-path: /user
 
 #spring
 spring:
@@ -49,4 +50,4 @@ eureka:
     healthcheck:
       enabled: true
   instance:
-    prefer-ip-address: true
+    prefer-ip-address: false

@@ -2,6 +2,7 @@ package com.burton.cloud.common.feign;
 
 import com.burton.cloud.common.domain.user.User;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @author Tainy
  * @date 2020-04-14 13:41
  */
+@Component
 @FeignClient(name = "user")
 public interface UserFeignClient {
 

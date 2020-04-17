@@ -4,9 +4,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@EntityScan(basePackages = "com.burton.cloud.common.domain.movie")
+@ComponentScan(basePackages = {"com.burton.cloud.common.feign","com.burton.cloud.movie.config"})
+@EntityScan(basePackages = {"com.burton.cloud.common.domain.movie"})
 @EnableFeignClients
 public class MovieApplication {
 
